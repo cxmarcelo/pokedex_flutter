@@ -12,7 +12,7 @@ class PokemonType {
   factory PokemonType.fromJson(Map<String, dynamic> json) {
     return PokemonType(
       json["slot"],
-      json["type"],
+      json["type"] == null ? null : NamedApiResource.fromJson(json["type"]),
     );
   }
 }

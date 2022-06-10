@@ -13,7 +13,7 @@ class PokemonStat {
 
   factory PokemonStat.fromJson(Map<String, dynamic> json) {
     return PokemonStat(
-      json["stat"],
+      json["stat"] == null ? null : NamedApiResource.fromJson(json["stat"]),
       json["effort"],
       json["baseStat"],
     );

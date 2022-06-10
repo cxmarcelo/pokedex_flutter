@@ -20,7 +20,6 @@ class PokemonSprites {
   );
 
   factory PokemonSprites.fromJson(Map<String, dynamic> json) {
-    //List<PokemonSpritesVersion> versionGroupDetails = .map((item) => PokemonSpritesVersion.fromJson(item)).toList();
     return PokemonSprites(
       json["back_female"],
       json["back_shiny_female"],

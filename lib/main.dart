@@ -28,8 +28,10 @@ class _PokedexAppState extends State<PokedexApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: const Color(0xFFac1029),
         appBar: AppBar(
-          title: Text("Pokedex"),
+          backgroundColor: const Color(0xFFdb092c),
+          title: const Text("Pokedex"),
         ),
         body: FutureBuilder<List<NamedApiResource>>(
           future: futurePokemon,
@@ -41,11 +43,11 @@ class _PokedexAppState extends State<PokedexApp> {
             } else if (snapshot.hasData) {
               return GridView(
                   gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                      maxCrossAxisExtent: 200,
+                      maxCrossAxisExtent: 120,
                       childAspectRatio: 1,
-                      crossAxisSpacing: 10,
+                      crossAxisSpacing: 5,
                       mainAxisSpacing: 10),
-                  padding: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(10.0),
                   children:
                       snapshot.data!.map((poke) => PokemonCard(poke)).toList());
             }

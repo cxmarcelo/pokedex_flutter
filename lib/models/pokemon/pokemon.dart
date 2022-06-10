@@ -51,22 +51,22 @@ class Pokemon {
     List<dynamic> abilitiesDynamic = json['abilities'] ?? [];
     List<PokemonAbility> abilities = abilitiesDynamic.map((item) => PokemonAbility.fromJson(item)).toList();
 
-    List<dynamic> formsDynamic = json['abilities'] ?? [];
+    List<dynamic> formsDynamic = json['forms'] ?? [];
     List<NamedApiResource> forms = formsDynamic.map((item) => NamedApiResource.fromJson(item)).toList();
 
-    List<dynamic> gameIndicesDynamic = json['abilities'] ?? [];
+    List<dynamic> gameIndicesDynamic = json['gameIndices'] ?? [];
     List<VersionGameIndex> gameIndices = gameIndicesDynamic.map((item) => VersionGameIndex.fromJson(item)).toList();
 
-    List<dynamic> heldItemsDynamic = json['abilities'] ?? [];
+    List<dynamic> heldItemsDynamic = json['heldItems'] ?? [];
     List<PokemonHeldItem> heldItems = heldItemsDynamic.map((item) => PokemonHeldItem.fromJson(item)).toList();
 
-    List<dynamic> movesDynamic = json['abilities'] ?? [];
+    List<dynamic> movesDynamic = json['moves'] ?? [];
     List<PokemonMove> moves = movesDynamic.map((item) => PokemonMove.fromJson(item)).toList();
 
-    List<dynamic> statsDynamic = json['abilities'] ?? [];
+    List<dynamic> statsDynamic = json['stats'] ?? [];
     List<PokemonStat> stats = statsDynamic.map((item) => PokemonStat.fromJson(item)).toList();
     
-    List<dynamic> typesDynamic = json['abilities'] ?? [];
+    List<dynamic> typesDynamic = json['types'] ?? [];
     List<PokemonType> types = typesDynamic.map((item) => PokemonType.fromJson(item)).toList();
 
     return Pokemon(
